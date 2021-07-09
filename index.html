@@ -15,11 +15,18 @@
       <div class="card">
         <h1>Welcome</h1>
 
-        <img src="./images/Roch-carre.jpg" alt="">
+        <div class="profile-pictures">
+          <img src="./images/Roch-carre.jpg" alt="">
+          <img class="hidden-image" src="./images/carre-souriant.png" alt="">
+        </div>
 
         <p>Hello, my name is Roch de Vidts. I'm a Full Stack Developer 👨‍💻 and I'm looking for new opportunities 🚀</p>
 
-        <a href="https://trollface.dk/" target="_blank">Discover my Tiktok page</a>
+        <a href="https://github.com/roch-dv" target="_blank">Discover my github profil</a>
+      </div>
+
+      <div class="card">
+        <p>Positive, reliable and motivated in everything that I undertake. Through my experiences and my hobbies, I learned to work under pressure and in a team, while being flexible and well-organized</p>
       </div>
 
       <div class="card">
@@ -27,25 +34,44 @@
 
         <ul class="list-inline">
           <li>
-            <a href="https://trollface.dk/" target="_blank">
-              <i class="fab fa-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://trollface.dk/" target="_blank">
+            <a href="https://github.com/roch-dv" target="_blank">
               <i class="fab fa-github"></i>
             </a>
           </li>
           <li>
-            <a href="https://trollface.dk/" target="_blank">
+            <a href="https://www.instagram.com/rochdevidts" target="_blank">
               <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/roch-de-vidts/" target="_blank">
+              <i class="fab fa-linkedin"></i>
             </a>
           </li>
         </ul>
       </div>
     </div>
-  </body>
+    <audio src="songs/trololo.mp3" muted></audio>
+    <script>
+      const audio = document.getElementsByTagName("audio")[0];
+      const img = document.querySelector('.profile-pictures');
 
+      function playSound(){
+        audio.muted = false;
+        audio.play();
+      }
+
+      function stopSound(){
+        audio.pause();
+        audio.currentTime = 0;
+      }
+
+      img.addEventListener("click", playSound, false);
+      img.addEventListener("mouseout", stopSound, false);
+
+    </script>
+
+  </body>
 </html>
 
 
