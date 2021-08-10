@@ -4,15 +4,22 @@
 
   <head>
     <title>Best website ever!</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   </head>
 
   <body>
     <div class="container">
       <div class="card">
+        <!-- <input id="base" type="color" name="base" value="#f0f0f0"> -->
+        <input id="blur" type="range" name="blur" min="0" max="10" value="5">
+
         <h1>Welcome</h1>
 
         <div class="profile-pictures">
@@ -52,7 +59,61 @@
       </div>
     </div>
     <audio src="songs/trololo.mp3" muted></audio>
+
+    <!-- Bootstrap -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> -->
+
     <script>
+      // ------ Change color background ------
+      const inputs = document.querySelectorAll('input');
+
+      function handleUpdate() {
+        const value = this.value;
+        let color;
+        switch (value) {
+          case '0':
+            color = '#eddfdf';
+            break;
+          case '1':
+            color = '#ede6df';
+            break;
+          case '2':
+            color = '#edecdf';
+            break;
+          case '3':
+            color = '#eaeddf';
+            break;
+          case '4':
+            color = '#e3eddf';
+            break;
+          case '5':
+            color = '#dfede6';
+            break;
+          case '6':
+            color = '#dfeaed';
+            break;
+          case '7':
+            color = '#e2dfed';
+            break;
+          case '8':
+            color = '#e7dfed';
+            break;
+          case '9':
+            color = '#e9dfed';
+            break;
+          case '10':
+            color = '#eddfe3';
+            break;
+        }
+
+        document.documentElement.style.setProperty(`--${this.name}`, color);
+        console.log(color);
+      }
+
+      inputs.forEach(input => input.addEventListener('change', handleUpdate));
+      inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+
+      // ------ Play Music On click ------
       const audio = document.getElementsByTagName("audio")[0];
       const img = document.querySelector('.profile-pictures');
 
