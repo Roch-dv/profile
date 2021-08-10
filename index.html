@@ -107,10 +107,8 @@
         }
 
         document.documentElement.style.setProperty(`--${this.name}`, color);
-        console.log(color);
       }
 
-      inputs.forEach(input => input.addEventListener('change', handleUpdate));
       inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
 
       // ------ Play Music On click ------
