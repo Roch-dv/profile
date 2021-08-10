@@ -65,7 +65,7 @@ a:hover {
 
 .profile-pictures:hover .hidden-image {
   display: inline;
-  cursor: pointer;
+  cursor: help;
 }
 
 .list-inline > li {
