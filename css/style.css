@@ -14,7 +14,7 @@ body{
   line-height: 25px;
 }
 
-img {
+.profile-pictures img {
   height: 180px;
   width: 180px;
   border-radius: 50%;
@@ -84,6 +84,51 @@ a:hover {
 
 .fab {
   font-size: 20px;
+}
+
+.text-align-justify {
+  text-align: justify;
+}
+
+.project-erased p {
+  padding-bottom: 20px;
+}
+
+.project-erased img {
+  width: -webkit-fill-available;
+}
+
+.project-title {
+  font-size: 18px;
+}
+
+.project-img {
+  line-height: 0px;
+}
+
+.ig-pictures {
+  display: flex;
+}
+
+.ig-pictures a {
+  width: 50%;
+  line-height: 0px;
+}
+
+.ig-img {
+  width: -webkit-fill-available;
+}
+
+.padding-right {
+  padding-right: 2px;
+}
+
+.padding-left {
+  padding-left: 2px;
+}
+
+.padding-bottom {
+  padding-bottom: 4px;
 }
 
 @media (max-width: 960px) {
